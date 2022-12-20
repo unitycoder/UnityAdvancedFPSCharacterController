@@ -1,5 +1,5 @@
-# UnityAdvancedFPSCharacterController
-An open-source project focusing on creating the best lightweight yet feature-rich non-Rigidbody first person shooter character controller for Unity3D.
+# Advanced First Person Shooter Character Controller
+An open-source project focusing on creating the best lightweight yet feature-rich non-Rigidbody first person shooter character controller for Unity3D. Feel free to use it as a template for your project, but crediting this repo would be really appreciated!
 
 
 ## Disclaimer
