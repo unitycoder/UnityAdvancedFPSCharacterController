@@ -1,8 +1,10 @@
 # UnityAdvancedFPSCharacterController
 An open-source project focusing on creating the best lightweight yet feature-rich non-Rigidbody first person shooter character controller for Unity3D.
 
+
 ## Disclaimer
 - There are portions of codes here that I have taken from tutorials. Even though they are free to use I stil want to clarify this.
+
 
 ## Features
 - Fully commented
@@ -14,6 +16,7 @@ An open-source project focusing on creating the best lightweight yet feature-ric
 - Camera headbobbing
 - Camera Controller smoothing
 
+
 ## Key Notes
 - Prefabs are located at Assets\Project\Runtime\Prefabs\
 - In order for Player Audio to work, make sure to add the following tags if they aren't already added:
@@ -22,8 +25,10 @@ An open-source project focusing on creating the best lightweight yet feature-ric
   - Material/Grass
   - Material/Metal
 
+
 ## Contribution
 Something's wrong with the code or you know better workarounds and alternatives? You can make a pull request. It will be very much appreciated!
+
 
 ## Credits
 - This project will not be possible without the wonderful people at [Samyam](https://www.youtube.com/@samyam)'s [Discord Server](https://discord.com/invite/B9bjMxj)
