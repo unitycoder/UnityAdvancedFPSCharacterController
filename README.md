@@ -7,7 +7,7 @@ Other than the purpose of giving a great starting point/template for creating a 
 
 ## Disclaimer
 - There are portions of code here that I have [taken from tutorials and resources](#credits). Even though they are free to use I still want to clarify this.
-- 
+
 <br>
 
 ## Features
