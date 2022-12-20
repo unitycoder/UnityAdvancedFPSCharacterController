@@ -3,7 +3,7 @@ An open-source project focusing on creating the best lightweight yet feature-ric
 
 
 ## Disclaimer
-- There are portions of codes here that I have taken from tutorials. Even though they are free to use I stil want to clarify this.
+- There are portions of code here that I have taken from tutorials. Even though they are free to use I still want to clarify this.
 
 
 ## Features
