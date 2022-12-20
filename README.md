@@ -12,7 +12,7 @@ Other than the purpose of giving a great starting point/template for creating a 
 
 ## Features
 - **Fully Commented**, just in case one finds something to be quite confusing. (Hopefully not 😊)
-- **Control Settings**, you can select between toggling and holding crouches, inverting mouse Y axis for camera rotation, and more!
+- **Control Settings**, you can select between toggling and holding crouch, inverting mouse Y axis for camera rotation, and more!
 - Mostly uses **Event-based Input**, this project utilizes Unity's New Input System and InputAction.CallbackContext events.
 - **Player Audio**, this repo comes with a bonus in-house script that manages player footsteps and jump sound effects.
 - **Slope Movement**, bump-free and fully functional!
