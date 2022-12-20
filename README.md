@@ -3,6 +3,7 @@ An open-source project focusing on creating the best lightweight yet feature-ric
 
 
 ## Features
+- Fully commented
 - Mostly uses event-based input (Utilizes Unity's New Input System and InputAction.CallbackContext events)
 - Player Audio (Material-based Footsteps and Jump SFX)
 - Slope movement
