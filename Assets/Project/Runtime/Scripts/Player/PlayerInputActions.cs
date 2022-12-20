@@ -71,42 +71,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Lean"",
-                    ""type"": ""Value"",
-                    ""id"": ""8bcb19a2-533a-45c1-a47b-ccfd9b7e6f0a"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Reload"",
-                    ""type"": ""Button"",
-                    ""id"": ""e96063bd-c015-48cb-ac63-b163215fa17c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""PrimaryAction"",
-                    ""type"": ""Button"",
-                    ""id"": ""ba65cc66-76e5-4ed5-9f99-f82a97f5f1e4"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""SecondaryAction"",
-                    ""type"": ""Button"",
-                    ""id"": ""3c802e02-3cab-4c01-94b3-edddca1061cf"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -219,72 +183,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""2a01ce3f-0b84-429a-97c7-8ff25635d531"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Lean"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""88779391-88b0-4f03-ab72-d6eb028c6728"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Lean"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""941f348d-ba90-4513-b7ed-134a71a1f837"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Lean"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9aa040dd-b8ca-4475-8e3a-f223ec4383f1"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Reload"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7115bff2-7801-4c9a-8540-5decfc295272"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""PrimaryAction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""23217e74-e64f-4e15-931b-72a7362fca5a"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""SecondaryAction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -331,10 +229,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Default_Jump = m_Default.FindAction("Jump", throwIfNotFound: true);
         m_Default_Crouch = m_Default.FindAction("Crouch", throwIfNotFound: true);
         m_Default_Sprint = m_Default.FindAction("Sprint", throwIfNotFound: true);
-        m_Default_Lean = m_Default.FindAction("Lean", throwIfNotFound: true);
-        m_Default_Reload = m_Default.FindAction("Reload", throwIfNotFound: true);
-        m_Default_PrimaryAction = m_Default.FindAction("PrimaryAction", throwIfNotFound: true);
-        m_Default_SecondaryAction = m_Default.FindAction("SecondaryAction", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -399,10 +293,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Default_Jump;
     private readonly InputAction m_Default_Crouch;
     private readonly InputAction m_Default_Sprint;
-    private readonly InputAction m_Default_Lean;
-    private readonly InputAction m_Default_Reload;
-    private readonly InputAction m_Default_PrimaryAction;
-    private readonly InputAction m_Default_SecondaryAction;
     public struct DefaultActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -412,10 +302,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Default_Jump;
         public InputAction @Crouch => m_Wrapper.m_Default_Crouch;
         public InputAction @Sprint => m_Wrapper.m_Default_Sprint;
-        public InputAction @Lean => m_Wrapper.m_Default_Lean;
-        public InputAction @Reload => m_Wrapper.m_Default_Reload;
-        public InputAction @PrimaryAction => m_Wrapper.m_Default_PrimaryAction;
-        public InputAction @SecondaryAction => m_Wrapper.m_Default_SecondaryAction;
         public InputActionMap Get() { return m_Wrapper.m_Default; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -440,18 +326,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Sprint.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnSprint;
                 @Sprint.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnSprint;
                 @Sprint.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnSprint;
-                @Lean.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnLean;
-                @Lean.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnLean;
-                @Lean.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnLean;
-                @Reload.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnReload;
-                @Reload.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnReload;
-                @Reload.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnReload;
-                @PrimaryAction.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnPrimaryAction;
-                @PrimaryAction.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnPrimaryAction;
-                @PrimaryAction.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnPrimaryAction;
-                @SecondaryAction.started -= m_Wrapper.m_DefaultActionsCallbackInterface.OnSecondaryAction;
-                @SecondaryAction.performed -= m_Wrapper.m_DefaultActionsCallbackInterface.OnSecondaryAction;
-                @SecondaryAction.canceled -= m_Wrapper.m_DefaultActionsCallbackInterface.OnSecondaryAction;
             }
             m_Wrapper.m_DefaultActionsCallbackInterface = instance;
             if (instance != null)
@@ -471,18 +345,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Sprint.started += instance.OnSprint;
                 @Sprint.performed += instance.OnSprint;
                 @Sprint.canceled += instance.OnSprint;
-                @Lean.started += instance.OnLean;
-                @Lean.performed += instance.OnLean;
-                @Lean.canceled += instance.OnLean;
-                @Reload.started += instance.OnReload;
-                @Reload.performed += instance.OnReload;
-                @Reload.canceled += instance.OnReload;
-                @PrimaryAction.started += instance.OnPrimaryAction;
-                @PrimaryAction.performed += instance.OnPrimaryAction;
-                @PrimaryAction.canceled += instance.OnPrimaryAction;
-                @SecondaryAction.started += instance.OnSecondaryAction;
-                @SecondaryAction.performed += instance.OnSecondaryAction;
-                @SecondaryAction.canceled += instance.OnSecondaryAction;
             }
         }
     }
@@ -512,9 +374,5 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
-        void OnLean(InputAction.CallbackContext context);
-        void OnReload(InputAction.CallbackContext context);
-        void OnPrimaryAction(InputAction.CallbackContext context);
-        void OnSecondaryAction(InputAction.CallbackContext context);
     }
 }

@@ -31,14 +31,6 @@ public class PlayerInput : MonoBehaviour
     private bool _sprint;
     public InputAction sprintAction { get {return _sprintAction; } set { _sprintAction = value; } }
     private InputAction _sprintAction;
-    public InputAction reloadAction { get {return _reloadAction; } set { _reloadAction = value; } }
-    private InputAction _reloadAction;
-    public bool shoot { get {return _shoot;}  set { _shoot = value; } }
-    private bool _shoot;
-    public InputAction primaryAction { get {return _primaryAction; } set { _primaryAction = value; } }
-    private InputAction _primaryAction;
-    public InputAction secondaryAction { get {return _secondaryAction; } set { _secondaryAction = value; } }
-    private InputAction _secondaryAction;
 
     /*
     Some stuff can't be done with just event-based input like sending contexts using .performed and .canceled
@@ -54,9 +46,6 @@ public class PlayerInput : MonoBehaviour
         jumpAction = playerInputActions.Default.Jump;
         crouchAction = playerInputActions.Default.Crouch;
         sprintAction = playerInputActions.Default.Sprint;
-        reloadAction = playerInputActions.Default.Reload;
-        primaryAction = playerInputActions.Default.PrimaryAction;
-        secondaryAction = playerInputActions.Default.SecondaryAction;
     }
 
     private void OnEnable()
@@ -87,11 +76,6 @@ public class PlayerInput : MonoBehaviour
     public void SprintInput(InputAction.CallbackContext ctx)
     {
         _sprint = ctx.ReadValueAsButton();
-    }
-
-    public void ShootInput(InputAction.CallbackContext ctx)
-    {
-        _shoot = ctx.ReadValueAsButton();
     }
 
     private void OnDisable()
