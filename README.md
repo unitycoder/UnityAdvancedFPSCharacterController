@@ -5,33 +5,33 @@ Other than the purpose of giving a great starting point/template for creating a 
 
 
 ## Disclaimer
-- There are portions of code here that I have taken from tutorials. Even though they are free to use I still want to clarify this.
+- There are portions of code here that I have [taken from tutorials and resources](#credits). Even though they are free to use I still want to clarify this.
 
 
 ## Features
-- Fully commented
-- Control settings (Toggle crouch, Invert Y-axis, etc)
-- Mostly uses event-based input (Utilizes Unity's New Input System and InputAction.CallbackContext events)
-- Player Audio (Material-based Footsteps and Jump SFX)
-- Slope movement
-- Smooth crouching
-- Movement smoothing
-- Camera side movement tilting
-- Camera headbobbing
-- Camera Controller smoothing
+- **Fully Commented**, just in case one finds something to be quite confusing. (Hopefully not 😊)
+- **Control Settings**, you can select between toggling and holding crouches, inverting mouse Y axis for camera rotation, and more!
+- Mostly uses **Event-based Input**, this project utilizes Unity's New Input System and InputAction.CallbackContext events.
+- **Player Audio**, this repo comes with a bonus in-house script that manages player footsteps and jump sound effects.
+- **Slope Movement**, bump-free and fully functional!
+- **Smooth Crouching**, make crouching buttery smooth and not a jittery mess like the old CS 1.6 days.
+- **Movement Smoothing**, since we're using the built-in Character Controller component as a base, we have to simulate the feeling of inertia and friction ourselves.
+- **Camera Side Movement Tilting**, like the one in Half-Life and Quake.
+- **Camera Headbobbing**, a must-have feature for realistic shooters and horror games!
+- **Camera Controller Smoothing**, an adjustable float value that can be used to make the camera controller more cinematic.
 
 
 ## Key Notes
-- Prefabs are located at Assets\Project\Runtime\Prefabs\
-- In order for Player Audio to work, make sure to add the following tags if they aren't already added:
-  - Material/Wood
-  - Material/Stone
-  - Material/Grass
-  - Material/Metal
+- **Prefabs** are located _at Assets\Project\Runtime\Prefabs\_.
+- **In order for Player Audio to work**, make sure to add the following tags if they aren't already added:
+  - _Material/Wood_
+  - _Material/Stone_
+  - _Material/Grass_
+  - _Material/Metal_
 
 
 ## Sponsorship
-I'd really appreciate it if someone were to donate me some cash. I am a solo game developer and I need some funding to motivate me to do better on my tasks so that I could deliver way better content.
+I'd really appreciate it if someone were to donate me some cash. I am an aspiring software and game developer that currently do stuff solo, and I need funding to motivate me to do a lot better on my tasks so that I could deliver way better content.
 
 
 ## Contribution
