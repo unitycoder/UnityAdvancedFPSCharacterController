@@ -26,6 +26,10 @@ An open-source project focusing on creating the best lightweight yet feature-ric
   - Material/Metal
 
 
+## Sponsorship
+I'd really appreciate it if someone were to donate me some cash. I am a solo game developer and I need some funding to motivate me to do better on my tasks so that I could deliver way better content.
+
+
 ## Contribution
 Something's wrong with the code or you know better workarounds and alternatives? You can make a pull request. It will be very much appreciated!
 
