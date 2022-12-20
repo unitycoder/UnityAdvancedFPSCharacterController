@@ -2,10 +2,12 @@
 An open-source project focusing on creating the best lightweight yet feature-rich non-Rigidbody first person shooter character controller for Unity3D. Feel free to use it as a template for your project, but crediting this repo would be really appreciated!
 
 Other than the purpose of giving a great starting point/template for creating a Character Controller, this repository also provides a good way to structure a Unity project using Assembly Definitions. (All the more reason for one to actually check this Unity project instead of just importing the scripts to somewhere else!)
+
 <br>
 
 ## Disclaimer
 - There are portions of code here that I have [taken from tutorials and resources](#credits). Even though they are free to use I still want to clarify this.
+- 
 <br>
 
 ## Features
@@ -19,6 +21,7 @@ Other than the purpose of giving a great starting point/template for creating a 
 - **Camera Side Movement Tilting**, like the one in Half-Life and Quake.
 - **Camera Headbobbing**, a must-have feature for realistic shooters and horror games!
 - **Camera Controller Smoothing**, an adjustable float value that can be used to make the camera controller more cinematic.
+- 
 <br>
 
 ## Key Notes
@@ -28,6 +31,7 @@ Other than the purpose of giving a great starting point/template for creating a 
   - _Material/Stone_
   - _Material/Grass_
   - _Material/Metal_
+  - 
 <br>
 
 ## Sponsorship
