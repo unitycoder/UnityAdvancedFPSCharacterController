@@ -13,6 +13,7 @@ An open-source project focusing on creating the best lightweight yet feature-ric
 - Slope movement
 - Smooth crouching
 - Movement smoothing
+- Camera side movement tilting
 - Camera headbobbing
 - Camera Controller smoothing
 
