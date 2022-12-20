@@ -25,7 +25,7 @@ Other than having the purpose of giving a great starting point/template for impl
 <br>
 
 ## Key Notes
-- **Prefabs** are located _at Assets\Project\Runtime\Prefabs\_.
+- **Prefabs** are located *at Assets\Project\Runtime\Prefabs\*.
 - **In order for Player Audio to work**, make sure to add the following tags if they aren't already added:
   - _Material/Wood_
   - _Material/Stone_
