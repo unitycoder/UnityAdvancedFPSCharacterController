@@ -36,4 +36,4 @@ Something's wrong with the code or you know better workarounds and alternatives?
 
 ## Credits
 - This project would not have been possible without the help from the wonderful people at [Samyam](https://www.youtube.com/@samyam)'s [Discord Server](https://discord.com/invite/B9bjMxj)
-- [Event-based input](https://www.youtube.com/watch?v=8Yih0p2Kvy0&t=3s), [Camera headbobbing](https://www.youtube.com/watch?v=5MbR2qJK8Tc&t=1s), smooth crouching, and [slope movement](https://www.youtube.com/watch?v=GI5LAbP5slE) are implemented and modified from [Hero 3D](https://www.youtube.com/@hero3d899).
+- [Event-based input](https://www.youtube.com/watch?v=8Yih0p2Kvy0&t=3s), [Camera headbobbing](https://www.youtube.com/watch?v=5MbR2qJK8Tc&t=1s), Smooth crouching, and [Slope movement](https://www.youtube.com/watch?v=GI5LAbP5slE) are implemented and modified from [Hero 3D](https://www.youtube.com/@hero3d899).
