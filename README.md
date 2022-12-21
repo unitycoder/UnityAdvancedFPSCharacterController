@@ -12,7 +12,7 @@ Other than having the purpose of giving a great starting point/template for impl
 
 ## Features
 ### Fully Commented
-All the essential scripts in this project are fully commented to a certain degree, to make sure that you learn how the code works as you inspect it.
+All the essential scripts in this project are fully commented to a certain degree, this is to make sure that you learn how the code works as you inspect it.
 ### Settings and Preferences
 This character controller comes with adjustable values and changeable control types that may suit your needs. You can select between toggling or holding crouch, inverting the camera controller's mouse input Y axis, and more!
 ### Uses Event-based Input
@@ -20,12 +20,18 @@ This character controller comes with adjustable values and changeable control ty
 This project utilizes Unity's New Input System and its InputAction.CallbackContext events, making event-based player input possible. This feature improves the performance of the game loop because all the inputs are edge-triggered and does not run on every frame.
 ### Player Audio
 This project comes with a bonus in-house script that manages player footsteps and jump sound effects.
-- **Slope Movement**, bump-free and fully functional!
-- **Smooth Crouching**, make crouching buttery smooth and not a jittery mess like the old CS 1.6 days.
-- **Movement Smoothing**, since we're using the built-in Character Controller component as a base, we have to simulate the feeling of inertia and friction ourselves.
-- **Camera Side Movement Tilting**, like the one in Half-Life and Quake.
-- **Camera Headbobbing**, a must-have feature for realistic shooters and horror games!
-- **Camera Controller Smoothing**, an adjustable float value that can be used to make the camera controller more cinematic.
+### Slope Movement
+A character controller will not be fully-functional if it doesn't have slope movement! This makes sure that going up or down on slanted surfaces will be seamless and would not cause any bumpy movement.
+### Smooth Crouching
+This feature makes crouching a smoother experience and not a jittery mess that simply just snaps the controller's transform/collider into tall and short heights and vice versa.
+### Movement Smoothing
+Since we're using the built-in Character Controller component as a base, we have to simulate the feeling of inertia and friction ourselves unlike in Rigidbody where it happens without extra coding.
+### Camera Headbobbing
+A must-have feature for realistic shooters and horror games!
+### Camera Side-Movement Tilting
+This tilts the camera towards the direction relative to the X axis of movement input. It gives off a similar effect to games like Quake and Half-Life.
+### Camera Controller Smoothing
+This project provides an adjustable float value that can be used to make the camera controller more cinematic when toned down.
 
 <br>
 
