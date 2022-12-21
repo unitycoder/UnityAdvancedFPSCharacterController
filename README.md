@@ -11,7 +11,7 @@ Other than having the purpose of giving a great starting point/template for impl
 <br>
 
 ## Table of Contents
----
+This README will be pretty lengthy in the near future. So, if you want to skip over some stuff or just want to cut straight to the chase, this one's for you!
 
 | Table of Contents               |
 | ------------------------------- |
@@ -21,7 +21,6 @@ Other than having the purpose of giving a great starting point/template for impl
 | [Contribution](#contribution)   |
 | [Credits](#credits)             |
 
----
 
 <br>
 
