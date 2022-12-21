@@ -10,6 +10,21 @@ Other than having the purpose of giving a great starting point/template for impl
 
 <br>
 
+## Table of Contents
+---
+
+| Table of Contents               |
+| ------------------------------- |
+| [Features](#features)           |
+| [Key Notes](#key-notes)         |
+| [Sponsorship](#sponsorship)     |
+| [Contribution](#contribution)   |
+| [Credits](#credits)             |
+
+---
+
+<br>
+
 ## Features
 ### Fully Commented
 All the essential scripts in this project are fully commented to a certain degree, this is to make sure that you learn how the code works as you inspect it.
