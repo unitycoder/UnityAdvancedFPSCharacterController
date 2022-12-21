@@ -6,7 +6,7 @@ Other than having the purpose of giving a great starting point/template for impl
 <br>
 
 ## Disclaimer
-- There are portions of code here that I have [taken from tutorials and resources](#credits). Even though they are free to use I still want to clarify that I use assets and resources that may be outside of my field of expertise at the moment because I am constantly learning something new everyday.
+There are portions of code here that I have [taken from tutorials and resources](#credits). Even though they are free to use I still want to clarify that I use assets and resources that may be outside of my field of expertise at the moment because I am constantly learning something new everyday.
 
 <br>
 
