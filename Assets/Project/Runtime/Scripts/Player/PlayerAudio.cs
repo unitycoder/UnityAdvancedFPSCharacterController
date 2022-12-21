@@ -1,14 +1,14 @@
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-/*
-Simple yet good way to handle player footsteps, jumping, and other sound effects.
-*/
+/// <summary>
+/// Simple yet good way to handle player footsteps, jumping, and other sound effects.
+/// </summary>
 public class PlayerAudio : MonoBehaviour {
     [SerializeField] private PlayerManager playerManager;
     [SerializeField] public AudioSource source;
 
-    /*
+    /**
     Material-based footstep sound effects. They're arrays because you're supposed to have more variants for each material
     to have that natural randomness.
     */
@@ -56,8 +56,8 @@ public class PlayerAudio : MonoBehaviour {
                 // Makes a raycast at the bottom of the controller to check for the tag of the gameobject it is stepping on
                 if(Physics.Raycast(transform.position, Vector3.down, out footHit, (playerManager.controller.height / 2) + (playerManager.playerMovement.moveData.groundDistance), playerManager.playerMovement.moveData.groundMask))
                 {
-                    material = (footHit.transform.gameObject.tag == "Material/Wood", footHit.transform.gameObject.tag == "Material/Grass",
-                    footHit.transform.gameObject.tag == "Material/Stone", footHit.transform.gameObject.tag == "Material/Metal");
+                    material = (footHit.transform.gameObject.tag == MaterialManager.Instance.woodTag, footHit.transform.gameObject.tag == MaterialManager.Instance.grassTag,
+                    footHit.transform.gameObject.tag == MaterialManager.Instance.stoneTag, footHit.transform.gameObject.tag == MaterialManager.Instance.metalTag); // See the MaterialManager script
                 } else
                 {
                     material = (false, false, false, false);

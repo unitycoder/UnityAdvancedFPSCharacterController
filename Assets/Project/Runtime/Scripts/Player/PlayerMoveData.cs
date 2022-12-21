@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-/*
-Sub-class of PlayerMovement, configure the default values here if you don't have a prefab yet.
-*/
+
+/// <summary>
+/// Sub-class of PlayerMovement, configure the default values here if you don't have a prefab yet.
+/// </summary>
 public class PlayerMoveData
 {   
     public bool allowMove = true;
@@ -66,7 +67,7 @@ public class PlayerMoveData
     public bool ccGrounded = false;
     public bool Fell = false;
 
-    /*
+    /**
     Only true if CoyoteTime has not exceeded the limit. Make sure CoyoteTimeMax only has a small value
     because this isn't for double-jumping.
     */
@@ -75,7 +76,7 @@ public class PlayerMoveData
         return CoyoteTime < CoyoteTimeMax;
     }
 
-    /*
+    /**
     Does the same for coyoteGrounded() but it should take a little longer.
     */
     public bool isFalling()

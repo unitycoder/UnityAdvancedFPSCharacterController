@@ -4,12 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/*
-This script handles walking, sprinting, jumping, and crouching. It also has coyote time and good slope movement.
-
-Slope Movement has been implemented and modified from - https://www.youtube.com/watch?v=GI5LAbP5slE&ab_channel=Hero3D
-
-*/
+/// <summary>
+/// This script handles walking, sprinting, jumping, and crouching. It also has coyote time and good slope movement.
+/// Slope Movement has been implemented and modified from - https://www.youtube.com/watch?v=GI5LAbP5slE&ab_channel=Hero3D
+/// </summary>
 public class PlayerMovement : MonoBehaviour
 {
     #region Components
@@ -76,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Gravity and Detection Logic
-    /*
+    /**
     Built-in CharacterController component is not a Rigidbody! Define gravity by yourself using this method.
     */
     private void ApplyGravity()
@@ -94,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void GroundChecker()
     {
-        /*
+        /**
         These two are for debugging only, because controller.isGrounded and coyoteGrounded() does not appear
         in inspector.
         */
@@ -126,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
             moveData.CoyoteTime += Time.deltaTime;
         }
 
-        /*
+        /**
         It was written intentionally like this way instead of moveData.Fell = moveData.isFalling() because you
         need to delay along the Invoke for ResetFall() above.
         */
@@ -207,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
     }
     #endregion
 
-    /*
+    /**
         QUEUEING - A feature I implemented for sprinting and crouching because as far as I know event-based input (22-51)
         does not actually track whether you're pressing a key or not.
     */
@@ -225,7 +223,7 @@ public class PlayerMovement : MonoBehaviour
         StopSprint();
     }
     private bool queueSprint;
-    /*
+    /**
     Checks if the following conditions are met while SprintInput() is being called.
     (Check the GroundChecker() method.)
     */
@@ -265,7 +263,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!moveData.coyoteGrounded()) return;
 
-        /*
+        /**
         These three lines of code calls for the playerAudio script to play jump sound effects.
         Remove it if you do not need it.
         */
@@ -290,7 +288,7 @@ public class PlayerMovement : MonoBehaviour
         StopCrouch();
     }
     private bool queueCrouch;
-    /*
+    /**
     Checks if the following conditions are met while CrouchInput() is being called.
     (Check the GroundChecker() method.)
     */

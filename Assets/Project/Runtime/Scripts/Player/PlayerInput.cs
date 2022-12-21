@@ -1,16 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/*
-A supposed singleton with a bunch of stuff that handles input. As much as possible, implement features
-that need player's input using this class.
-
-Reference - https://www.youtube.com/watch?v=8Yih0p2Kvy0&t=3s&ab_channel=Hero3D
-
-SETUP: I don't have time to explain, just use the "Managers" GameObject at Assets\Project\Runtime\Prefabs\
-The inputs can be found at the Input System's Player Input script, make sure to set Behaviour to "Invoke Unity Events"
-then a new dropdown should appear. Just do some tinkering with it and you'll understand how this asset does input.
-*/
+/// <summary>
+/// A supposed singleton with a bunch of stuff that handles input. As much as possible, implement features that need player's input using this class.
+/// Reference - https://www.youtube.com/watch?v=8Yih0p2Kvy0&t=3s&ab_channel=Hero3D
+/// SETUP: I don't have time to explain, just use the "Managers" GameObject at Assets\Project\Runtime\Prefabs\
+/// The inputs can be found at the Input System's Player Input script, make sure to set Behaviour to "Invoke Unity Events" then a new dropdown should appear. Just do some tinkering with it and you'll understand how this asset does input.
+/// </summary>
 public class PlayerInput : MonoBehaviour
 {
     public static PlayerInput Instance;
@@ -32,7 +28,7 @@ public class PlayerInput : MonoBehaviour
     public InputAction sprintAction { get {return _sprintAction; } set { _sprintAction = value; } }
     private InputAction _sprintAction;
 
-    /*
+    /**
     Some stuff can't be done with just event-based input like sending contexts using .performed and .canceled
     because I can't find a workaround for them. So I use InputAction.triggered and InputAction.IsPressed() instead.
     */
@@ -52,7 +48,7 @@ public class PlayerInput : MonoBehaviour
     {
         playerInputActions.Default.Enable();
     }
-
+    // These public voids are accessed by the Input System's Player Input script that has its behaviour set to "Invoke Unity Events"
     public void MoveInput(InputAction.CallbackContext ctx)
     {
         _move = ctx.ReadValue<Vector2>();
