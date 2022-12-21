@@ -40,9 +40,9 @@ This feature makes crouching a smoother experience and not a jittery mess that s
 ### Movement Smoothing
 Since we're using the built-in Character Controller component as a base, we have to simulate the feeling of inertia and friction ourselves unlike in Rigidbodies where it happens without extra coding.
 ### Camera Headbobbing
-Camera Headbobbing is separated into two sub-features that we'll call move bobbing and land bobbing. **Move Bobbing** is when the camera noticeably shakes in a pre-set pattern that makes walking and running more immersive. **Land Bobbing** is when the camera indents itself downwards as the controller lands from a fall, giving that satisfying <i>oomph</i> that adds up to the immersion. Both of these features are good for realistic shooters and horror games
+Camera Headbobbing is separated into two sub-features that we'll call move bobbing and land bobbing. **Move Bobbing** is when the camera noticeably shakes in a pre-set pattern that makes walking and running more immersive. **Land Bobbing** is when the camera indents itself downwards as the controller lands from a fall, giving that satisfying <i>oomph</i> that adds up to the immersion. Both of these features are good for realistic shooters and horror games!
 ### Camera Side-Movement Tilting
-This tilts the camera towards the direction relative to the X axis of movement input. It gives off a similar effect to games like Quake and Half-Life.
+This tilts the camera towards the direction relative to the X axis of the controller's movement input. It gives off a similar effect to games like Quake and Half-Life.
 ### Camera Controller Smoothing
 This project provides an adjustable float value that can be used to make the camera controller more cinematic when toned down.
 
