@@ -11,12 +11,15 @@ Other than having the purpose of giving a great starting point/template for impl
 <br>
 
 ## Features
-- **Fully Commented**, just in case one finds something to be quite confusing or rather complicated. (Hopefully not 😊)
-- **Control Settings**, you can select between toggling and holding crouch, inverting mouse Y axis for camera rotation, and more!
+### Fully Commented
+All the essential scripts in this project are fully commented to a certain degree, to make sure that you learn how the code works as you inspect it.
+### Settings and Preferences
+This character controller comes with adjustable values and changeable control types that may suit your needs. You can select between toggling or holding crouch, inverting the camera controller's mouse input Y axis, and more!
 ### Uses Event-based Input
 **Why is this is a big deal?**
 This project utilizes Unity's New Input System and its InputAction.CallbackContext events, making event-based player input possible. This feature improves the performance of the game loop because all the inputs are edge-triggered and does not run on every frame.
-- **Player Audio**, this repo comes with a bonus in-house script that manages player footsteps and jump sound effects.
+### Player Audio
+This project comes with a bonus in-house script that manages player footsteps and jump sound effects.
 - **Slope Movement**, bump-free and fully functional!
 - **Smooth Crouching**, make crouching buttery smooth and not a jittery mess like the old CS 1.6 days.
 - **Movement Smoothing**, since we're using the built-in Character Controller component as a base, we have to simulate the feeling of inertia and friction ourselves.
