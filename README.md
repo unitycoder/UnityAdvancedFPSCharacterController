@@ -30,7 +30,6 @@ All the essential scripts in this project are fully commented to a certain degre
 ### Settings and Preferences
 This character controller comes with adjustable values and changeable control types that may suit your needs. You can select between toggling or holding crouch, inverting the camera controller's mouse input Y axis, and more!
 ### Uses Event-based Input
-**Why is this is a big deal?**
 This project utilizes Unity's New Input System and its InputAction.CallbackContext events, making event-based player input possible. This feature improves the performance of the game loop because all the inputs are edge-triggered and does not run on every frame.
 ### Player Audio
 This project comes with a bonus in-house script that manages player footsteps and jump sound effects.
