@@ -7,7 +7,8 @@ using UnityEngine;
 /// <summary>
 /// Sub-class of PlayerMovement, configure the default values here if you don't have a prefab yet.
 /// </summary>
-public class PlayerMoveData
+[CreateAssetMenu(fileName = "PlayerMoveData", menuName = "Advanced FPS Controller/PlayerMoveData", order = 0)]
+public class PlayerMoveData : ScriptableObject 
 {   
     public bool allowMove = true;
     
