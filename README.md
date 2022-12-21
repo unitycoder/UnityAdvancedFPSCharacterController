@@ -6,14 +6,17 @@ Other than having the purpose of giving a great starting point/template for impl
 <br>
 
 ## Disclaimer
-- There are portions of code here that I have [taken from tutorials and resources](#credits). Even though they are free to use I still want to clarify this.
+- There are portions of code here that I have [taken from tutorials and resources](#credits). Even though they are free to use I still want to clarify that I use assets and resources that may be outside of my field of expertise at the moment because I am constantly learning something new everyday.
 
 <br>
 
 ## Features
-- **Fully Commented**, just in case one finds something to be quite confusing. (Hopefully not 😊)
+- **Fully Commented**, just in case one finds something to be quite confusing or rather complicated. (Hopefully not 😊)
 - **Control Settings**, you can select between toggling and holding crouch, inverting mouse Y axis for camera rotation, and more!
-- Mostly uses **Event-based Input**, this project utilizes Unity's New Input System and InputAction.CallbackContext events.
+### Uses Event-based Input
+This project utilizes Unity's New Input System and InputAction.CallbackContext events.
+**Why is this is a big deal?**
+As much as possible you shouldn't detect for inputs every frame using the Update() method.
 - **Player Audio**, this repo comes with a bonus in-house script that manages player footsteps and jump sound effects.
 - **Slope Movement**, bump-free and fully functional!
 - **Smooth Crouching**, make crouching buttery smooth and not a jittery mess like the old CS 1.6 days.
