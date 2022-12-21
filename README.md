@@ -38,7 +38,7 @@ A character controller will not be fully-functional if it doesn't have slope mov
 ### Smooth Crouching
 This feature makes crouching a smoother experience and not a jittery mess that simply just snaps the controller's transform/collider into tall and short heights and vice versa.
 ### Movement Smoothing
-Since we're using the built-in Character Controller component as a base, we have to simulate the feeling of inertia and friction ourselves unlike in Rigidbody where it happens without extra coding.
+Since we're using the built-in Character Controller component as a base, we have to simulate the feeling of inertia and friction ourselves unlike in Rigidbodies where it happens without extra coding.
 ### Camera Headbobbing
 A must-have feature for realistic shooters and horror games!
 ### Camera Side-Movement Tilting
