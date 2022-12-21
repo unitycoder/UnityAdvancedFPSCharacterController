@@ -33,6 +33,8 @@ This character controller comes with adjustable values and changeable control ty
 This project utilizes Unity's New Input System and its InputAction.CallbackContext events, making event-based player input possible. This feature improves the performance of the game loop because all the inputs are edge-triggered and does not run on every frame.
 ### Player Audio
 This project comes with a bonus in-house script that manages player footsteps and jump sound effects.
+### Coyote Time
+This feature makes jumping off edges easier.
 ### Slope Movement
 A character controller will not be fully-functional if it doesn't have slope movement! This makes sure that going up or down on slanted surfaces will be seamless and would not cause any bumpy movement.
 ### Smooth Crouching
