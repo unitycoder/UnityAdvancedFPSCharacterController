@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Update Methods
-    void Update() // Self explanatory, come on man
+    private void Update() // Self explanatory, come on man
     {
         Inputs();
         ApplyGravity();
@@ -196,7 +196,7 @@ public class PlayerMovement : MonoBehaviour
         playerManager.controller.stepOffset = moveData.coyoteGrounded() ? 0.3f : 0f;
         // moveSmoothen is responsible for creating some sort of inertia and overall makes movement smoother.
         moveData.moveSmoothen = Vector3.MoveTowards(moveData.moveSmoothen, moveDir, (playerManager.controller.isGrounded ? moveData._groundSmoothen : moveData.airSmoothen) * Time.deltaTime);
-
+        
         playerManager.controller.Move(moveData.moveSmoothen * moveData.speed * Time.deltaTime);
 
         // Will be useful for PlayerAudio, remove if you do not need PlayerAudio.

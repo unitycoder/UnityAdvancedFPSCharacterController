@@ -261,6 +261,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e538098f6cfbecf468a65c1ff3638415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialTags:
+  - Material/Wood
+  - Material/Stone
+  - Material/Grass
+  - Material/Metal
   woodTag: Material/Wood
   stoneTag: Material/Stone
   metalTag: Material/Metal
