@@ -1,12 +1,14 @@
 # Advanced First Person Shooter Character Controller
-An open-source project focusing on creating the best lightweight yet feature-rich non-Rigidbody first person shooter character controller for Unity3D. Feel free to use it as a template for your project, but crediting this repo would be really appreciated!
+An open-source project focused on creating the best lightweight yet feature-rich non-Rigidbody first person shooter character controller for Unity3D. Feel free to use it as a template for your project, but crediting this repo would be really appreciated!
 
 Other than having the purpose of giving a great starting point/template for implementing a character controller to make your game actually playable, this repository also provides a good way to structure a Unity project using Assembly Definitions. (All the more reason for one to actually check this Unity project instead of just importing the scripts to somewhere else!)
 
 <br>
 
-## Disclaimer
-There are portions of code here that I have [taken from tutorials and resources](#credits). Even though they are free to use I still want to clarify that I use assets and resources that may be outside of my field of expertise at the moment because I am constantly learning something new everyday.
+## Before You Use
+**Disclaimer** - There are portions of code here that I have [taken from tutorials and resources](#credits). Even though they are free to use I still want to clarify that I use assets and resources that may be outside of my field of expertise at the moment because I am constantly learning something new everyday.<br>
+
+Before you use this repo as a template, this project is being actively developed and many things are subject to change.
 
 <br>
 
