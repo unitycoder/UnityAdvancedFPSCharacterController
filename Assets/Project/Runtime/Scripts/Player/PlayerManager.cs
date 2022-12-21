@@ -5,22 +5,44 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(PlayerAudio))]
 [RequireComponent(typeof(PlayerMovement))]
-/*
-The "parent" class of the essential scripts needed to make the whole thing work,
-makes referencing other components more flexible.
-*/
+/// <summary>
+/// The "parent" class of the essential scripts needed to make the whole thing work, makes referencing other components more flexible.
+/// </summary>
 public class PlayerManager : MonoBehaviour
 {
     [Header("References")]
-    public GameObject camPrefab; // Can be found in Assets\Project\Runtime\Prefabs\
-    // The following components are set to public to make them easier to access each other just by referencing this script.
-    public PlayerAudio playerAudio; // Makes the PlayerAudio easier to access. Remove this if you don't have any audio to use or just don't want to use it, but it works really well.
-    public CameraManager cameraManager; // Makes the CameraManager component easier to access.
-    public CameraController cameraController; // Makes the CameraController component easier to access.
-    public PlayerMovement playerMovement; // Makes the PlayerMovement component easier to access.
-    public CharacterController controller; // Makes the CharacterController component easier to access.
-    public Transform orientation; // Used by PlayerMovement component. Makes the Orientation transform easier to access.
-    public Transform head; // Used by PlayerMovement and CameraManager components. Makes the Head transform easier to access.
+    /// <summary>
+    /// Can be found in Assets\Project\Runtime\Prefabs\
+    /// </summary>
+    public GameObject camPrefab;
+    /// <summary>
+    /// Makes the PlayerAudio easier to access. Remove this if you don't have any audio to use or just don't want to use it, but it works really well.
+    /// </summary>
+    public PlayerAudio playerAudio;
+    /// <summary>
+    /// Makes the CameraManager component easier to access.
+    /// </summary>
+    public CameraManager cameraManager;
+    /// <summary>
+    /// Makes the CameraController component easier to access.
+    /// </summary>
+    public CameraController cameraController;
+    /// <summary>
+    /// Makes the PlayerMovement component easier to access.
+    /// </summary>
+    public PlayerMovement playerMovement;
+    /// <summary>
+    /// Makes the CharacterController component easier to access.
+    /// </summary>
+    public CharacterController controller;
+    /// <summary>
+    /// Used by PlayerMovement component. Makes the Orientation transform easier to access.
+    /// </summary>
+    public Transform orientation;
+    /// <summary>
+    /// Used by PlayerMovement and CameraManager components. Makes the Head transform easier to access.
+    /// </summary>
+    public Transform head;
 
     public void Start() // Initialize Player Camera if there is none, no need to put it yourself.
     {
