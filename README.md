@@ -8,7 +8,7 @@ Other than having the purpose of giving a great starting point/template for impl
 ## Before You Use
 **Disclaimer** - There are portions of code here that I have [taken from tutorials and resources](#credits). Even though they are free to use I still want to clarify that I use assets and resources that may be outside of my field of expertise at the moment because I am constantly learning something new everyday.<br>
 
-Before you use this repo as a template, this project is being actively developed and many things are subject to change.
+Before you use this repo as a template in any means, this project is currently being actively developed and many things are subject to change. Kindly star the repo before forking, please!
 
 <br>
 
