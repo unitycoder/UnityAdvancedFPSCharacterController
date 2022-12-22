@@ -50,11 +50,11 @@ public class PlayerMovement : MonoBehaviour
     [Header("Jumping")]
     public bool useGravity = true;
     public bool attemptingJump = false;
+    
+    [Header("Ground Detection")]
     public bool Grounded = false;
     public bool ccGrounded = false;
     public bool Fell = false;
-    
-    [Header("Ground Detection")]
     public float CoyoteTime;
     /**
     Only true if CoyoteTime has not exceeded the limit. Make sure CoyoteTimeMax only has a small value
