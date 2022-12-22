@@ -52,8 +52,8 @@ public class PlayerAudio : MonoBehaviour {
                 if (Physics.Raycast(transform.position, Vector3.down, out footHit, (playerManager.controller.height / 2) +
                 (playerManager.playerMovement.moveData.groundDistance), playerManager.playerMovement.moveData.groundMask))
                 {
-                    // MAKE SURE THE STRING INDEXES IN THE MATERIALTAGS ARRAY MATCH THE INDEXES OF AUDIOCLIP ARRAYS IN THE FOOTSTEPS ARRAY
-                    // EG - MaterialTag[0] = Stone, the first array of AudioClips in the Footsteps array should have stone footstep sounds.
+                    // Make sure the indexes of the AudioClip arrays match the indexes of the strings at MaterialManager.
+                    // (eg materialTags[0] = Material/Wood, then footsteps[0].audioClip should have wooden footstep sound effects.
                     string tag = footHit.transform.gameObject.tag;
                     currentMaterial = System.Array.IndexOf(MaterialManager.Instance.materialTags, tag); // Array.IndexOf lets us find the specific index of a string in the array
                     // Checks if currentMaterial >= 0 because it becomes -1 which causes it to go out of bounds from the array.
