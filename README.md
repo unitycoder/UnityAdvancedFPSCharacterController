@@ -54,11 +54,12 @@ This project provides an adjustable float value that can be used to make the cam
 
 ## Key Notes
 - **Prefabs** are located at <i>Assets\Project\Runtime\Prefabs\.</i>
-- **In order for Player Audio to work**, make sure to add the following tags if they aren't already added:
+- **In order for Player Audio to work**, make sure you have tags that correspond with the footstep sound effects you're trying to add. FOr example:
   - _Material/Wood_
   - _Material/Stone_
   - _Material/Grass_
   - _Material/Metal_
+  My implementation of footsteps requires an array of strings (your tags) and multiple AudioClip arrays inside an array (yeah, I did not stutter, arrays in an array). **More info at PlayerAudio.cs, but here's a rundown - Make sure the indexes of the AudioClip arrays match the indexes of the strings. (eg materialTags[0] = Material/Wood, then footsteps[0].audioClip should have wooden footstep sound effects.**
 
 <br>
 
