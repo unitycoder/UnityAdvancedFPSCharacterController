@@ -26,9 +26,9 @@ MonoBehaviour:
   walkDamp: 4.5
   sprintDamp: 3.95
   crouchDamp: 20
-  _groundSmoothen: 0
+  _groundSmoothen: 4.5
   airSmoothen: 2.25
-  velocity: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: -7, z: 0}
   moveSmoothen: {x: 0, y: 0, z: 0}
   heightLerp: 10
   standHeight: 2
@@ -36,6 +36,7 @@ MonoBehaviour:
   attemptingCrouch: 0
   isCrouching: 0
   toggleCrouch: 0
+  useGravity: 1
   attemptingJump: 0
   jumpForce: 2.5
   groundMask:
@@ -50,4 +51,4 @@ MonoBehaviour:
   fallSpeed: 0
   groundDistance: 1
   slopeSlideSpeed: 1
-  antiBump: 5
+  antiBump: 7

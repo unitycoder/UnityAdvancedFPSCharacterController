@@ -46,7 +46,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Start() // Initialize Player Camera if there is none, no need to put it yourself.
     {
-        if(cameraManager == null && cameraController == null)
+        if (cameraManager == null && cameraController == null)
         {
             cameraManager = Instantiate(camPrefab, Vector3.zero, Quaternion.identity).GetComponent<CameraManager>();
             cameraManager.playerManager = this;

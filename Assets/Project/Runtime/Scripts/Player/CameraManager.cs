@@ -64,8 +64,8 @@ public class CameraManager : MonoBehaviour {
     /// </summary>
     [SerializeField] float desiredFreq(bool condition)
     {
-        if(condition = playerManager.playerMovement.moveData.isCrouching) return frequency = crouchFreq;
-        else if(condition = playerManager.playerMovement.moveData.isSprinting) return frequency = sprintFreq;
+        if (condition = playerManager.playerMovement.isCrouching) return frequency = crouchFreq;
+        else if (condition = playerManager.playerMovement.isSprinting) return frequency = sprintFreq;
         else return frequency = walkFreq;
     }
 
@@ -115,7 +115,7 @@ public class CameraManager : MonoBehaviour {
     #region Camera Tilting
     private void TiltCamera()
     {
-        if(playerManager.playerMovement.moveData.isCrouching) // Dont tilt when crouching
+        if (playerManager.playerMovement.isCrouching) // Dont tilt when crouching
         {
             targetMoveTilt = Mathf.Lerp(targetMoveTilt, 0f, tiltMultiplier * Time.deltaTime);
             return;
@@ -127,7 +127,7 @@ public class CameraManager : MonoBehaviour {
         Check for X input, do not use == 1 and == -1 because it will only work for keyboard input.
         Use > 0 and < 0 because this will help future-proof it just in case you want cross-platform.
         */
-        switch(playerManager.playerMovement.moveData.x)
+        switch(playerManager.playerMovement.x)
         {
             case < 0f:
                 tilt = moveTilt;
@@ -141,14 +141,14 @@ public class CameraManager : MonoBehaviour {
         }
 
         // Finally do the math. See CameraController line 50
-        targetMoveTilt = Mathf.Lerp(targetMoveTilt, playerManager.playerMovement.moveData.z != 0 ? tilt / 2 : tilt, tiltMultiplier * Time.deltaTime);
+        targetMoveTilt = Mathf.Lerp(targetMoveTilt, playerManager.playerMovement.z != 0 ? tilt / 2 : tilt, tiltMultiplier * Time.deltaTime);
     }
     #endregion
 
     #region Headbob Logic
     private void Headbob()
     {
-        if(reduceMotion) // Not an epic gamer? Reset the position and rotation of camera to clear the effects of headbobbing.
+        if (reduceMotion) // Not an epic gamer? Reset the position and rotation of camera to clear the effects of headbobbing.
         {
             desiredLandBob = desiredLandBob == Vector3.zero ? desiredLandBob : Vector3.zero;
             landBobOffset = landBobOffset == Vector3.zero ? landBobOffset : Vector3.zero;
@@ -158,12 +158,12 @@ public class CameraManager : MonoBehaviour {
         }
 
         // This relies on the frame-dependent delay we have put in GroundChecker() at PlayerMovement.
-        if(playerManager.playerMovement.moveData.Fell && playerManager.playerMovement.moveData.coyoteGrounded())
+        if (playerManager.playerMovement.Fell && playerManager.playerMovement.coyoteGrounded())
         {
-			BobOnce(new Vector3(0f, playerManager.playerMovement.moveData.fallSpeed, 0f));
+			BobOnce(new Vector3(0f, playerManager.playerMovement.fallSpeed, 0f));
         }
 
-        var bobCondition = playerManager.playerMovement.moveData.isCrouching && playerManager.playerMovement.moveData.isSprinting;
+        var bobCondition = playerManager.playerMovement.isCrouching && playerManager.playerMovement.isSprinting;
 
         desiredFreq(bobCondition); // See 31 - 36
 
@@ -189,27 +189,27 @@ public class CameraManager : MonoBehaviour {
         float speed = new Vector3(playerManager.controller.velocity.x, 0, playerManager.controller.velocity.z).magnitude;
 
         // Reset the Z axis headbob/rotation when not sprinting and not grounded.
-        if(!playerManager.playerMovement.moveData.isSprinting || !playerManager.playerMovement.moveData.coyoteGrounded()) ResetRotation();
+        if (!playerManager.playerMovement.isSprinting || !playerManager.playerMovement.coyoteGrounded()) ResetRotation();
 
-        if(speed < toggleSpeed) // Not enough speed? Reset the headbobbing.
+        if (speed < toggleSpeed) // Not enough speed? Reset the headbobbing.
         {
             ResetPosition();
             return;
         }
-        if(!playerManager.playerMovement.moveData.coyoteGrounded()) return;
+        if (!playerManager.playerMovement.coyoteGrounded()) return;
 
         PlayMotion(FootstepMotion(), FootstepRotation()); // Do the headbobbing if it passes the criteria.
     }
 
     private void ResetPosition() // Smoothly reset the position.
     {
-        if(moveBobPos == startPos) return;
+        if (moveBobPos == startPos) return;
         moveBobPos = Vector3.Lerp(moveBobPos, startPos, moveBobReturnSpeed * Time.deltaTime);
     }
 
     private void ResetRotation() // Smoothly reset the rotation.
     {
-        if(moveBobRot == startRot) return;
+        if (moveBobRot == startRot) return;
         moveBobRot = Vector3.Lerp(moveBobRot, startRot, moveBobReturnSpeed * Time.deltaTime);
     }
 
@@ -217,7 +217,7 @@ public class CameraManager : MonoBehaviour {
     private void PlayMotion(Vector3 motion, Vector3 rotation)
     {
         moveBobPos += motion; // See line 67
-        if(!playerManager.playerMovement.moveData.isSprinting) return;
+        if (!playerManager.playerMovement.isSprinting) return;
         moveBobRot += rotation; // See CameraController line 44
     }
 
@@ -225,15 +225,15 @@ public class CameraManager : MonoBehaviour {
     private Vector3 FootstepMotion()
     {
         Vector3 pos = Vector3.zero;
-        if(moveBobY) pos.y += (Mathf.Sin(Time.time * frequency) * amplitude) * Time.deltaTime;
-        if(moveBobX) pos.x += (Mathf.Cos(Time.time * frequency * 0.5f) * amplitude / 1.75f) * Time.deltaTime * playerManager.transform.right.x;
-        if(moveBobX) pos.z += (Mathf.Cos(Time.time * frequency * 0.5f) * amplitude / 1.75f) * Time.deltaTime * playerManager.transform.right.z;
+        if (moveBobY) pos.y += (Mathf.Sin(Time.time * frequency) * amplitude) * Time.deltaTime;
+        if (moveBobX) pos.x += (Mathf.Cos(Time.time * frequency * 0.5f) * amplitude / 1.75f) * Time.deltaTime * playerManager.transform.right.x;
+        if (moveBobX) pos.z += (Mathf.Cos(Time.time * frequency * 0.5f) * amplitude / 1.75f) * Time.deltaTime * playerManager.transform.right.z;
         return pos;
     }
     private Vector3 FootstepRotation()
     {
         Vector3 rot = Vector3.zero;
-        if(moveBobX) rot.z += (Mathf.Cos(Time.time * frequency * 0.5f) * amplitude * 5) * Time.deltaTime;
+        if (moveBobX) rot.z += (Mathf.Cos(Time.time * frequency * 0.5f) * amplitude * 5) * Time.deltaTime;
         return rot;
     }
     #endregion
