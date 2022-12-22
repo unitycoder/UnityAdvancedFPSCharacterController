@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour {
     /// <summary>
     /// x and y are the calculated versions of xRotation and yRotation, the former follows the latter using a Lerp function that relies on the value of damp.
     /// </summary>
-    [SerializeField] float x, y, damp; 
+    [SerializeField] public float x, y, damp; 
 
     private void Update()
     {

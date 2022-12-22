@@ -22,16 +22,16 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 0f;
     public Vector3 velocity = Vector3.zero;
     public Vector3 moveSmoothen = Vector3.zero;
-    public float x = 0f, z = 0f;
+    public float x = 0f, y = 0f;
     public bool isMoving = false;
     public bool isWalking = false;
     public bool isSprinting = false;
     // A method where we send booleans to define how fast the controller should move
     public float desiredSpeed(bool condition)
     {
-        if (condition = isCrouching) return speed = Mathf.Lerp(speed, moveData.crouchSpeed, moveData.acceleration * Time.deltaTime);
-        else if (condition = isSprinting) return speed = Mathf.Lerp(speed, moveData.sprintSpeed, moveData.acceleration * Time.deltaTime);
-        else return speed = Mathf.Lerp(speed, moveData.walkSpeed, moveData.acceleration * Time.deltaTime);
+        if (condition = isCrouching) return speed = moveData.crouchSpeed;
+        else if (condition = isSprinting) return speed = moveData.sprintSpeed;
+        else return speed = moveData.walkSpeed;
     }
     public float _groundSmoothen;
     // A method where PlayerMovement send booleans to define how smooth or slipperly the floor is
@@ -120,12 +120,17 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Inputs
-    Vector3 moveInput;
+    Vector2 moveInput;
     private void Inputs() // Keyboard / WASD inputs
     {
+        attemptingJump = PlayerInput.Instance.jump;
         x = PlayerInput.Instance.move.x;
-        z = PlayerInput.Instance.move.y; // WASD is 2D, but it's important to pair it with Vector3.z
-        moveInput = new Vector3(x, 0f, z);
+        y = PlayerInput.Instance.move.y;
+        moveInput = new Vector2(x, y);
+        if (moveInput.sqrMagnitude > 1)
+        {
+            moveInput.Normalize();
+        }
     }
     #endregion
 
@@ -236,7 +241,7 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         // Input Vector3 multiplied with the character's transform directions.
-        moveDir = (playerManager.orientation.forward * moveInput.z + playerManager.orientation.right * moveInput.x).normalized;
+        moveDir = (playerManager.orientation.forward * moveInput.y + playerManager.orientation.right * moveInput.x).normalized;
 
         // Checks if controller is moving, this makes sure that sprinting is bug-free
         isMoving = (new Vector3(velocity.x, 0f, velocity.z) != Vector3.zero);
@@ -335,11 +340,20 @@ public class PlayerMovement : MonoBehaviour
     // These two handles the input for crouching, they're separated from the actual crouching code to make queing possible.
     private void CrouchInput(InputAction.CallbackContext ctx)
     {
-        queueCrouch = true;
+        switch(toggleCrouch)
+        {
+            case true:
+                queueCrouch = !queueCrouch;
+            break;
+            case false:
+                queueCrouch = true;
+            break;
+        }
         StartCrouch();
     }
     private void StandInput(InputAction.CallbackContext ctx)
     {
+        if(toggleCrouch) return;
         queueCrouch = false;
         StopCrouch();
     }
@@ -383,7 +397,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void StopCrouch()
     {
-        if (toggleCrouch) return;
         isCrouching = false;
         if (crouchRoutine != null) StopCoroutine(crouchRoutine); // Bug-fix for the forever looping AdjustHeight() Coroutine bug.
         crouchRoutine = StartCoroutine(AdjustHeight(moveData.standHeight));

@@ -349,33 +349,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
   cameraController: {fileID: 1323583015567131320}
-  FPPvcam: {fileID: 1323583014360977531}
   clampCam: 1
   moveCamera: 1
   invertYAxis: 0
   reduceMotion: 0
   sensX: 15
   sensY: 15
-  camSpeed: 5
+  landBobSpeed: 15
+  landBobMultiplier: 1
   desyncOffset: {x: 0, y: 0, z: 0}
-  leanOffset: {x: 0, y: 0, z: 0}
-  desiredBob: {x: 0, y: 0, z: 0}
-  bobOffset: {x: 0, y: 0, z: 0}
-  footstepShakePos: {x: 0, y: 0, z: 0}
-  footstepShakeRot: {x: 0, y: 0, z: 0}
-  bobX: 1
-  bobY: 1
+  desiredLandBob: {x: 0, y: 0, z: 0}
+  landBobOffset: {x: 0, y: 0, z: 0}
+  moveBobPos: {x: 0, y: 0, z: 0}
+  moveBobRot: {x: 0, y: 0, z: 0}
+  moveBobX: 1
+  moveBobY: 1
   amplitude: 1
   frequency: 0
-  desiredFreq: 10
   walkFreq: 10
   sprintFreq: 15
   crouchFreq: 5
-  bobReturnSpeed: 5
-  walkFov: 0
-  sprintFov: 0
-  crouchFov: 0
-  leanTilt: 10
+  toggleSpeed: 3
+  moveBobReturnSpeed: 10
   moveTilt: 3.5
   tiltMultiplier: 2
 --- !u!114 &1323583015567131320

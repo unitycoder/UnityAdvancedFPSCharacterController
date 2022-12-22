@@ -154,6 +154,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveData: {fileID: 11400000, guid: be83807c9267fbe4b99a1bd811c53179, type: 2}
   playerManager: {fileID: 7201003986977753929}
+  allowMove: 1
+  speed: 0
+  velocity: {x: 0, y: 0, z: 0}
+  moveSmoothen: {x: 0, y: 0, z: 0}
+  x: 0
+  y: 0
+  isMoving: 0
+  isWalking: 0
+  isSprinting: 0
+  _groundSmoothen: 0
+  attemptingCrouch: 0
+  isCrouching: 0
+  toggleCrouch: 1
+  useGravity: 1
+  attemptingJump: 0
+  Grounded: 0
+  ccGrounded: 0
+  Fell: 0
+  CoyoteTime: 0
+  fallSpeed: 0
 --- !u!114 &7066643054708243630
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerMoveData", menuName = "Advanced FPS Controller/PlayerMoveData", order = 0)]
 public class PlayerMoveData : ScriptableObject 
 {   
-    public float acceleration = 10f;
     public float walkSpeed = 5f;
     public float sprintSpeed = 8f;
     public float crouchSpeed = 2.5f;

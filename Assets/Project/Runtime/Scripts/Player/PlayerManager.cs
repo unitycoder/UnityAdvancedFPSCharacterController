@@ -44,7 +44,7 @@ public class PlayerManager : MonoBehaviour
     /// </summary>
     public Transform head;
 
-    public void Start() // Initialize Player Camera if there is none, no need to put it yourself.
+    public IEnumerator Start() // Initialize Player Camera if there is none, no need to put it yourself.
     {
         if (cameraManager == null && cameraController == null)
         {
@@ -52,5 +52,7 @@ public class PlayerManager : MonoBehaviour
             cameraManager.playerManager = this;
             cameraController = cameraManager.cameraController;
         }
+        yield return new WaitForEndOfFrame();
+        UISettings.Instance.playerManager = this;
     }
 }

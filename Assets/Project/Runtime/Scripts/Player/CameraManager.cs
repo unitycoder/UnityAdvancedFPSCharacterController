@@ -45,7 +45,7 @@ public class CameraManager : MonoBehaviour {
     /// <summary>
     /// Checks if you want headbobbing for specific axis.
     /// </summary>
-    [SerializeField] private bool moveBobX, moveBobY;
+    [SerializeField] public bool moveBobX, moveBobY;
     /// <summary>
     /// How strong the headbobbing is.
     /// </summary>
@@ -78,7 +78,7 @@ public class CameraManager : MonoBehaviour {
     /// <summary>
     /// How fast the camera goes back to original pos and rot.
     /// </summary>
-    [SerializeField] public float moveBobReturnSpeed;
+    [SerializeField] public float moveBobReturnSpeed = 10f;
 
     /// [Header("Field of View")]
     /// public float walkFov, sprintFov, crouchFov;
@@ -141,7 +141,7 @@ public class CameraManager : MonoBehaviour {
         }
 
         // Finally do the math. See CameraController line 50
-        targetMoveTilt = Mathf.Lerp(targetMoveTilt, playerManager.playerMovement.z != 0 ? tilt / 2 : tilt, tiltMultiplier * Time.deltaTime);
+        targetMoveTilt = Mathf.Lerp(targetMoveTilt, playerManager.playerMovement.y != 0 ? tilt / 2 : tilt, tiltMultiplier * Time.deltaTime);
     }
     #endregion
 
