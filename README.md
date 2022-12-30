@@ -53,6 +53,7 @@ This project provides an adjustable float value that can be used to make the cam
 <br>
 
 ## Key Notes
+- This project **uses Cinemachine**. (Never really intended to, but I just didn't remove it lol)
 - **Prefabs** are located at <i>Assets\Project\Runtime\Prefabs\.</i>
 - **In order for Player Audio to work**, make sure you have tags that correspond with the footstep sound effects you're trying to add. For example:
   - _Material/Wood_
