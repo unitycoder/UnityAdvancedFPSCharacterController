@@ -25,12 +25,16 @@ This README will be pretty lengthy in the near future. So, if you want to skip o
 
 <br>
 
-## Upcoming Features
+## Upcoming Features and Updates
 This repo now had its **first** stable release, but there will be more as I refactor old and unhealthy code to make better iterations of existing features, and introduce completely new ones!
 ### Settings UI
-Change controls settings in runtime without re-building the project with new changes to Inpsector! It also comes with a working saving system.
+Change controls settings in runtime without re-building the project with new changes made to the Player GameObject's Inpsector! It also comes with a working save system.
 ### Mobile Integration
 This repo will soon have support for mobile controls!
+### Others
+- Possible revamp of how Player Input is being managed.
+- New and better slope detection and movement!
+- Save System with Binary Reader/Writer and JSON examples.
 
 <br>
 
